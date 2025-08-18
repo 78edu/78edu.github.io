@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>bark-ng</title>    
+<link rel="stylesheet" href="index_files/pure-min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="index_files/1.css">
+</head><body><redirect text="">
+
+
+
+
+
+
+<div id="layout">
+
+<div id="menu">
+<div class="pure-menu">
+<div class="pure-menu-heading">
+<a href="https://78edu.github.io/">
+<img src="index_files/dog4.svg" alt="-" class="logo"> 
+</a>
+<br>
+
+<br><a href="https://78edu.github.io/index.php">(Перейти на сайт)</a>
+
+</div>
+<ul class="pure-menu-list">
+
+<li class="pure-menu-item ">
+<a href="" class="pure-menu-link">все категории</a>
+</li>
+
+<li class="pure-menu-item ">
+<a href="" class="pure-menu-link">c/c++/asm</a>
+</li>
+<li class="pure-menu-item ">
+<a href="" class="pure-menu-link">php/pyhton/js</a>
+</li>
+<li class="pure-menu-item ">
+<a href="" class="pure-menu-link">железо</a>
+</li>
+<li class="pure-menu-item ">
+<a href="" class="pure-menu-link">хаки</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="main">
+<div class="content">
+<div class="post">
+<h1>Отладочная плата для чипа BGA корпусе</h1>
+			<p><img class="pure-img-responsive" src="index_files/bga-dupont2.jpg"><img class="pure-img-responsive" src="index_files/bga-dupont5.jpg"><img class="pure-img-responsive" src="index_files/bga_pcb.png"><img class="pure-img-responsive" src="index_files/bga_sch.png"><img class="pure-img-responsive" src="index_files/bga_reball.jpg"><img class="pure-img-responsive" src="index_files/bga_reball2.jpg"><img class="pure-img-responsive" src="index_files/bga_reball3.jpg"><img class="pure-img-responsive" src="index_files/bga-dupont8.jpg">
+Отладочная плата для трансивера от Analog Devices и обвязка для подключения к микроконтроллеру или FPGA.
+4 слоя, отверстия 0,2мм, шаг выводов BGA 0,5мм. 
+Площадки под чипом уменьшили на фабрике при заказе, чтобы попасть в требования к точности (иначе очень дорого для хобби).
+
+Питание распределено для минимального сопротивления. Аналоговая часть питается очень "тихим" источником, чтобы избежать помех.
+
+В целом - схема могла бы быть компактнее, но я специально выбрал более доступные 1117 LDO, большие разъемы и крупные компоненты для удобства изучения чипа.</p>
+			<a>Категория:hardware</a>
+			<hr>
+			</div><div class="post">
+<h1>Плата под АЦП, микроконтроллер и CPLD</h1>
+			<p><img class="pure-img-responsive" src="index_files/agmaz_tqfp.jpg"><img class="pure-img-responsive" src="index_files/agmaz3.jpg"><img class="pure-img-responsive" src="index_files/agmaz4.jpg"><img class="pure-img-responsive" src="index_files/agmaz6.jpg"><img class="pure-img-responsive" src="index_files/agmaz_sch.png"><img class="pure-img-responsive" src="index_files/agmaz_pcb.png"><img class="pure-img-responsive" src="index_files/agmaz_cad.png">
+
+Отладочная плата для быстрого АЦП под TQFP-100 и QFN, сделана с помощью ЛУТ ради любопытства: возможно ли такое дома без заказа на фабрике.
+Обычно люди не делают платы с настолько мелкими допусками (в некоторых местах 0,15мм) дома - это сложно.
+
+Данные идут с АЦП на CPLD для перехода от 1,8В к 3,3В логическому уровню, далее они должны попадать в SRAM память и читаться программой для дальнейшего вывода через USB.
+Плата не доделана, текстолит получился со второй попытки (на фото видно, что они разные)
+
+Попытка с шаблоном для ультрафиолета (есть на фото) была отброшена из-за лишних засветов и неудобного удаления фоторезиста с шаблона. 
+Зазоры специально выбраны такими тесными, это не ошибка. И часть дорожек должна быть соединена перемычками, т.к. невозможно их развести в одном слое.</p>
+			<a>Категория:hardware</a>
+			<hr>
+			</div><div class="post">
+<h1>Вывод ошибок PHP в консоль браузера</h1>
+			<p><img class="pure-img-responsive" src="index_files/errors.png"><img class="pure-img-responsive" src="index_files/errors2.png">
+Удобный способ вывода ошибок PHP в консоль браузера, чтобы не ломать верстку страницы. Облегчает разработку.
+Есть вывод переменных и массивов, разные цвета. Используется свой класс для обработки ошибок.</p>
+			<a>Категория:scripts</a>
+			<hr>
+			</div><div class="post">
+<h1>Капча для сайта</h1>
+			<p><img class="pure-img-responsive" src="index_files/redcaptcha.png"><img class="pure-img-responsive" src="index_files/CAPTCHAImage2.png">
+Капча с линиями для этого сайта.
+Капчу со словами нейросети могут распознать, а мою - нет.
+
+Можно изменять число символов, тип линий и правила.
+Для версии с искажениями используется Imagick (должна быть поддержка этого расширения на сервере, на этом хостинге ее нет и это очень плохо), для первой версии - GD.
+
+Ответ на новую капчу: 4D
+На старую: O (AGQ это для мелкого пунктира)</p>
+			<a>Категория:scripts</a>
+			<hr>
+			</div><div class="post">
+<h1>Ну наконец-то новый блог!</h1>
+			<p>Работа идет, блог наконец обзавелся:
+</p><ol>
+<li>Системой входа</li>
+<li>Системой стилей</li>
+<li>Защитой от некоторых банальных уязвимостей</li>
+<li>Проверкой прав доступа</li>
+<li>Перекрашен стиль и заменена собака (временно)</li>
+<li>Написаны редиректы</li>
+<li>Написана капча с изображением и линиями</li>
+<li>Перенесены посты</li>
+<li>Добавлена поддержка bb code</li>
+<li>Добавлен просмотрщик изображений, нужно дописать адаптивные стили</li>
+</ol>
+
+Теперь блог готов для использования!
+
+Однако, функционал нескольких пользователей, заливки файлов, реакций, языковых пакетов и javascript еще не написаны.
+
+На очереди:
+<ol>
+<li>Добавить возможность загружать файлы (она есть через отдельный менеджер)</li>
+<li>Добавить просмотрщик одного поста (пока длинные статьи не планируются, поэтому можно обойтись, но для релиза необходимо)</li>
+<li>Удалить лишний код и логику, и переписать некоторые куски для большей однозначности</li>
+<li>Добавить страницу с загруженными файлами для пользователя (для 
+редактирования и хранения их в одной директории), мини файл менеджер по 
+сути</li>
+</ol><p></p>
+			<a>Категория:all</a>
+			<hr>
+			</div><div class="post">
+<h1>STM32F103C8T6 - чтение/запись iButton ключей (Arduino)</h1>
+			<p>По виртуальному COM-порту принимает команды и выводит результат работы (текстовое меню).
+W-Записать. R-Читать. M-Изменить буфер.
+Вывод нужно подтянуть к 5В питанию через 2кОм резистор.
+
+<a href="https://78edu.github.io/data/ibtn-rwm.ino">Скетч для arduino, проверен на Bluepill.</a><br></p>
+			<a>Категория:compiled</a>
+			<hr>
+			</div><div class="post">
+<h1>Playstation 2 bios extract</h1>
+			<p><img class="pure-img-responsive" src="index_files/ps2bios.png"> 
+<a href="https://78edu.github.io/data/ps2-bios-extract.txt">Скрипт на python</a><br>
+</p><p>Позволяет извлекать модули из дампа ПЗУ. Потом их можно анализировать в IDA / Ghidra с R5900 MIPS плагином.</p><p></p>
+			<a>Категория:scripts</a>
+			<hr>
+			</div><div class="post">
+<h1>Mortal Kombat 4 reg bypass patch</h1>
+			<p>При запуске игры появлялось сообщение Mortal Kombat 4 is not installed и игра отказывалась запускаться.
+
+Причина проблемы в проверке другой ветки реестра, игра вышла до поддержки 64 бит:
+HKLM\SOFTWARE\<b>Wow6432Node</b>\...
+
+MK4 1.0 Mortal Kombat 4 is not installed reg check fix patch:
+MK-4.EXE 
+SHA-1: ce60d4c98208544b09425a681a7cf815288e060c
+MD5: 867fbf7b1b6bf575e7b0a45ffbceee06
+Patch:
+000AC3F0: 75 74
+000AC3F8: 74 75</p>
+			<a>Категория:hacks</a>
+			<hr>
+			</div><div class="post">
+<h1>Need for Speed: Underground v1.1001 EXE - Easy Drift cheat (трейнер)</h1>
+			<p><img class="pure-img-responsive" src="index_files/easydrift-trn2.png"> <img class="pure-img-responsive" src="index_files/easydrift-trn.png">
+<br>
+<a href="https://78edu.github.io/data/nfs-easydrift2.rar">Архив с исходником и исполняемым файлом. Пароль: 123</a><br> </p><p>Очки дрифта всегда на экране и не сбрасываются от остановок, клавиши R и столкновений.</p><p></p>
+			<a>Категория:hacks</a>
+			<hr>
+			</div><div class="post">
+<h1>Need for Speed: Underground v1.1001 EXE - Easy Drift cheat (v2)</h1>
+			<p>Теперь работает как задумано!
+Очки всегда на экране и не сбрасываются от остановок, клавиши R и столкновений. Совсем.
+Есть вариант с удвоением очков и с счетом 1к1.
+V2:
+1.   00434731 mov [esi+10],00000003 mov [esi+10],00000001
+2.   0043473D cmp eax,01 cmp eax,00
+3.   004349C4 mov [ecx+20],ebx nop - сброс очков от столкновения основной.
+4.   00434CBD mov [eax+20],edx nop - еще один сброс, случается редко при плотном контакте. теперь абсолютно никакой потери очков от столкновений.
+5.   00434728 fld dword ptr [esi+28] fld dword ptr [esi+20] очки пропорциональны дрифту, который не обнуляется при остановке и столкновениях. на деле это 2x набранных очков (это не баг, это фича!)
+Если не нужно удвоение очков, то можно пропатчить код так:
+6.   0043472E fadd dword ptr [esi+20] оригинальный опкод, очки считаются как x2.
+6.1. 0043472E nop в этом варианте очки считаются 1к1, без умножения на два.</p>
+			<a>Категория:hacks</a>
+			<hr>
+			</div><div class="post">
+<h1>Need for Speed: Underground v1.1001 EXE - Warp cheat</h1>
+			<p>Грубый хак, но помогает не тратить время на гонки по 6 кругов (100% работает в этом случае, но только один раз).
+Не выключается, если выключить - машиной нельзя будет рулить, ломается камера и потом где-нибудь вылетит в другой гонке.
+Начать гонку, пропатчить, дождаться старта, нажать R раньше чем поедут соперники.
+Дождаться пока закончится гонка без вашего участия.
+Протаскивает машину по waypointам, без столкновений, всегда с победой. Даже если много трафика и кругов.
+Работает для круга и дрифта(бесполезно). Для спринта и гонки на выбывание может вообще не работать.
+Крашит игру если начать следующую гонку. Крашит в спринте. После патча меняется и другой код и возвратом опкода это не исправить, результат - вылеты. Но зато круги проходит само на ура)
+
+00586254: fstp dword ptr [esi-04]  nop</p>
+			<a>Категория:hacks</a>
+			<hr>
+			</div><div class="post">
+<h1>Скрипт для рисования спиралей</h1>
+			<p><a href="https://78edu.github.io/data/spiral-textart.txt">Скрипт на python</a><br>
+</p><pre id="textart" class="textart" style="padding-bottom:" 1em;="" text-align:center;="">█                 █                                          █                 █
+█                 █                                          █                 █
+█                 █                                          █                 █
+ █                 █                                        █                 █ 
+   █                █                                      █                █   
+     █                █                                  █                █     
+       █               █                                █               █       
+          █              █                            █              █          
+             █             █                        █             █             
+                █            █                    █            █                
+                    █          █                █          █                    
+                        █         █          █         █                        
+                             █      █      █      █                             
+                                  █    ██    █                                  
+                                  █    ██    █                                  
+                             █      █      █      █                             
+                        █         █          █         █                        
+                    █          █                █          █                    
+                █            █                    █            █                
+             █             █                        █             █             
+          █              █                            █              █          
+       █               █                                █               █       
+     █                █                                  █                █     
+   █                █                                      █                █   
+ █                 █                                        █                 █ 
+█                 █                                          █                 █
+█                 █                                          █                 █
+█                 █                                          █                 █
+█                 █                                          █                 █
+█                 █                                          █                 █
+█                 █                                          █                 █
+ █                 █                                        █                 █ 
+   █                █                                      █                █   
+     █                █                                  █                █     
+       █               █                                █               █       
+          █              █                            █              █          
+             █             █                        █             █             
+                █            █                    █            █                
+                    █          █                █          █                    
+                        █         █          █         █                        
+                             █      █      █      █                             
+                                  █    ██    █                                  
+                                  █    ██    █                                  
+                             █      █      █      █                             
+                        █         █          █         █                        
+                    █          █                █          █                    
+                █            █                    █            █                
+             █             █                        █             █             
+          █              █                            █              █          
+       █               █                                █               █       
+     █                █                                  █                █     
+   █                █                                      █                █   
+ █                 █                                        █                 █ 
+█                 █                                          █                 █
+█                 █                                          █                 █
+█                 █                                          █                 █
+█                 █                                          █                 █
+█                 █                                          █                 █
+█                 █                                          █                 █
+ █                 █                                        █                 █ 
+   █                █                                      █                █   
+     █                █                                  █                █     
+       █               █                                █               █       
+          █              █                            █              █          
+             █             █                        █             █             
+                █            █                    █            █                
+                    █          █                █          █                    
+                        █         █          █         █                        
+                             █      █      █      █                             
+                                  █    ██    █                                  
+                                  █    ██    █                                  
+                             █      █      █      █                             
+                        █         █          █         █                        
+                    █          █                █          █                    
+                █            █                    █            █                
+             █             █                        █             █             
+          █              █                            █              █          
+       █               █                                █               █       
+     █                █                                  █                █     
+   █                █                                      █                █   
+ █                 █                                        █                 █ 
+█                 █                                          █                 █
+█                 █                                          █                 █
+█                 █                                          █                 █
+</pre><p></p>
+			<a>Категория:scripts</a>
+			<hr>
+			</div>   
+</div>
+</div>
+</div>
+
+<dialog class="imgviewmodal" style="display:none;">
+<button class="pure-button pure-input-1-1 pure-button-primary" style="position:fixed;" id="imgclose">Закрыть</button>
+<div style="padding-left: 0%;">
+<div class="imgviewmodalscroll">
+<img id="imgviewsrc" src="index_files/dog4.svg" class=""> 
+</div></div>
+<br>
+<div style="padding-left: 0%;">
+</div>
+</dialog>
+
+
+
+      <script>
+
+         const modal = document.querySelector('.imgviewmodal');
+		 modal_img = document.getElementById('imgviewsrc');
+
+		 function hideModal() {	modal.style.display = 'none';}		
+		 function showModal() { modal.style.display = 'block';}			
+		 
+		 document.getElementById('imgclose').onclick = hideModal;
+
+		var post_images = document.querySelectorAll('.pure-img-responsive');		
+		 for (i = 0; i < post_images.length; i++) {
+post_images[i].addEventListener('click', function(){  modal_img.src = this.src; showModal(); });
+			}
+
+	//elem.style.background = 'red';
+      </script>
+
+</redirect></body></html>
